@@ -8,6 +8,14 @@ typedef struct _datastruct
 	struct _datastruct *next;
 	struct _datastruct *prev;
 }datastruct;
+
+struct vector;
+
+typedef struct 
+{
+	vector *sourse;
+}iter;
+
 typedef struct 
 {
 	datastruct *data_vec;
@@ -16,7 +24,10 @@ typedef struct
 	size_t size_el;
 	char *name;
 	char err_mem;
+	
 }vector;
+
+
 /* reserve and init */
 void reserve_func(vector *vec,size_t size);
 
@@ -25,11 +36,16 @@ void reserve_func(vector *vec,size_t size);
 	namevec->size_el=sizeof(type);\
 	namevec->size=size;\
 	namevec->name=#namevec;
-#define init_res_vector(size,type,namevec)\
+
+/*#define init_res_vector(size,type,namevec)\
 	reserve_func(namevec,size);\
 	namevec.size_el=sizeof(type);\
 	namevec.size=size;\
 	namevec.name=#namevec;
+*/
+
+vector* get_el(vector *vec,int index);
 int push_el(vector *vec);
 
-void del_el(vector *vec);
+void pop_el(vector *vec);
+void del_el(iter *deleted_el);
