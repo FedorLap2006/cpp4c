@@ -1,4 +1,4 @@
-```c
+```
 
 #pragma once
 #include "vector__c.h"
