@@ -44,6 +44,15 @@ int push_el(vector *vec)
 	return 1;
 }
 
-void del_el(vector *vec)
+void pop_el(vector *vec)
 {
+	if(data_vec!=NULL)
+	{
+		if((vec->top->prev)!=NULL) vec->top=vec->top->prev;
+		if(top!=NULL)
+		{
+			free(top->next);
+		}
+	}
+	return;
 }
