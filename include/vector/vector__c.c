@@ -56,3 +56,18 @@ void pop_el(vector *vec)
 	}
 	return;
 }
+
+vector* get_el(vector *vec,int index)
+{
+	vector *cur_vec = vec;
+	//iter *ret_el;
+	
+	if(vector->size==0) return NULL;
+	
+	int it;
+	for(it=0;it<index;it++)
+	{
+		cur_vec=cur_vec->next;
+	}
+	return cur_vec;
+}
