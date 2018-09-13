@@ -1,5 +1,8 @@
 #pragma once
-//#include 
+//#include
+#include <stdarg.h> // for va_list
+#include <stdlib.h> // for malloc,realloc,free
+
 /*
 typedef struct
 {
@@ -15,15 +18,15 @@ typedef char* string_t;
 //#define equal_cat(str,...) str##__VA_ARG__
 
 //#define equal(str,...) = #equal_cat(str,__VA_ARG__) // ????
-//#define equal_string(str,...) #str 
+//#define equal_string(str,...) #str
 
 
 
 char* str_cat(char *str,...);
 
 
-#define equal_cat(str,...) =(string_t)str_cat(str,__VA_AGR__); // hello,world,bla,bla -->> hello [__VA_ARG__] worldblabla [/] --->>>> "helloworldblabla"
-#define equal(str) = str; // no use  = str 
+#define equal_cat(str,...) =(string_t)str_cat(str,__VA_AGRS__); // hello,world,bla,bla -->> hello [__VA_ARG__] worldblabla [/] --->>>> "helloworldblabla"
+#define equal(str) = str; // no use  = str
 
 
 
