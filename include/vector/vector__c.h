@@ -31,11 +31,13 @@ typedef struct
 /* reserve and init */
 void reserve_func(vector *vec,size_t size);
 
-#define init_res_vector_ptr(size,type,namevec)\
+#define init_res_vector(size,type,namevec)\
 	reserve_func(namevec,size);\
 	namevec->size_el=sizeof(type);\
 	namevec->size=size;\
 	namevec->name=#namevec;
+
+//this macro inital vector
 
 /*#define init_res_vector(size,type,namevec)\
 	reserve_func(namevec,size);\
@@ -45,7 +47,11 @@ void reserve_func(vector *vec,size_t size);
 */
 
 vector* get_el(vector *vec,int index);
-int push_el(vector *vec);
-
+int push_el(vector *vec;
 void pop_el(vector *vec);
 void del_el(iter *deleted_el);
+
+int size_vec(vector *vec);
+
+void clear_vec(vector *vec);
+aa

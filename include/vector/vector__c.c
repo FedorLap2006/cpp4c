@@ -1,4 +1,7 @@
+// Copyrate Fedor Lapshin 2018 
 #include "vector__c.h"
+
+
 
 
 /* reserve and init */
@@ -39,7 +42,7 @@ vector* get_el(vector *vec,int index)
 {
 	vector *cur_vec = vec;
 	//iter *ret_el;
-	
+
 	if(vector->size==0) return NULL;
 	
 	int it;
@@ -98,4 +101,18 @@ void delete_el(iter *deleted_el,vector *vec)
 	return;
 }
 
+int size_vec(vector *vec)
+{
+	return vec->size;
+}
 
+void clear_vec(vector *vec)
+{
+//	while(1)
+//	{
+//		pop_el(vec);
+//		if(vec->datavec==NULL) break;
+//	}
+	free(vec->data_vec);
+	return;
+}
