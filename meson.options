@@ -1,0 +1,1 @@
+option('build_demos', type : 'boolean', value : false)
