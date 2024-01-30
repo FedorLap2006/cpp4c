@@ -1,7 +1,4 @@
-// Copyrate Fedor Lapshin 2018 
-#include "vector__c.h"
-
-
+// Copyright Fedor Lapshin 2018, All rights reserved.
 
 
 /* reserve and init */
